@@ -1,0 +1,97 @@
+{
+    "_version": "1.65.0",
+    "sap.app": {
+        "id": "multiselectinput",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap/generator-fiori:basic",
+            "version": "1.16.2",
+            "toolsId": "50ca3c41-f7b2-4e44-8967-f95def3d25f5"
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.132.1",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "multiselectinput.i18n.i18n"
+                }
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "controlAggregation": "pages",
+                "controlId": "app",
+                "transition": "slide",
+                "type": "View",
+                "viewType": "XML",
+                "path": "multiselectinput.view",
+                "async": true,
+                "viewPath": "multiselectinput.view"
+            },
+            "routes": [
+                {
+                    "name": "RouteMultiSelectView",
+                    "pattern": ":?query:",
+                    "target": [
+                        "TargetMultiSelectView"
+                    ]
+                }
+            ],
+            "targets": {
+                "TargetMultiSelectView": {
+                    "id": "MultiSelectView",
+                    "name": "MultiSelectView"
+                }
+            }
+        },
+        "rootView": {
+            "viewName": "multiselectinput.view.App",
+            "type": "XML",
+            "id": "App"
+        }
+    }
+}

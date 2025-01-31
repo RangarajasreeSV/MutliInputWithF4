@@ -1,0 +1,21 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+    <SelectDialog
+        id="_IDGenSelectDialog"
+        class="sapUiSizeCompact"
+        noDataText="No Data Found"
+        title="Select Items"
+        search=".handleSearch"
+        confirm=".handleConfirm"
+        cancel=".handleCancel"
+        items="{oMultiModel>/}"
+        multiSelect="true"
+    >
+        <StandardListItem
+            id="_IDGenStandardListItem"
+            title="{oMultiModel>name}"
+        />
+    </SelectDialog>
+</core:FragmentDefinition>
