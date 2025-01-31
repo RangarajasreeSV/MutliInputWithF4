@@ -76,6 +76,9 @@ sap.ui.define([
             });
            }
 
+        },
+        onSubmit : function(){
+            MessageToast.show("Clicked on Submit!");
         }
     });
 });
